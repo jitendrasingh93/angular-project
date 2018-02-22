@@ -1,0 +1,9 @@
+com/ephesoft/demo/configuration/CORSFilter.class
+com/ephesoft/demo/controllers/IndexController.class
+com/ephesoft/demo/service/UserServiceImpl.class
+com/ephesoft/demo/configuration/AppConfiguration.class
+com/ephesoft/demo/configuration/MongoConfig.class
+com/ephesoft/demo/configuration/AppInitializer.class
+com/ephesoft/demo/service/UserService.class
+com/ephesoft/demo/controllers/UserRestController.class
+com/ephesoft/demo/model/User.class
