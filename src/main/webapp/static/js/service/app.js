@@ -7,8 +7,10 @@
 
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
+        $locationProvider.hashPrefix('!');
         $routeProvider
-            .when('/', {
+
+    .when('/', {
                 controller: 'HomeController',
                 templateUrl: 'app.views/home.html',
                 //controller: 'UserController',
@@ -28,6 +30,11 @@
                 controllerAs: 'vm'
             })
 
+            .when('/home', {
+                //controller: 'RegisterController',
+                templateUrl: 'http://google.com',
+                //controllerAs: 'vm'
+            })
             //$templateCache.put('login.html')
             .otherwise({ redirectTo: '/login' });
     }

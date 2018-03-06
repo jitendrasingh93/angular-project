@@ -11,12 +11,13 @@
 <head>
     <title>index</title>
     <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/static/css/login.css' />" rel="stylesheet"/>
     <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"/>
 </head>
 <body>
-<header style="background: #a4a0a5; height: 70px; width: 100%">
+<%--<header style="background: #a4a0a5; height: 70px; width: 100%">
     <p align="right" ng-show="islogin"><a href="#!/login" class="btn btn-primary" style="margin: 20px;">Logout</a></p>
-</header>
+</header>--%>
 
 <div class="jumbotron">
     <div class="container">
@@ -34,11 +35,10 @@
         <%--<a href="http://jasonwatmore.com">JasonWatmore.com</a>--%>
     </p>
 </div>
-
-<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="//code.angularjs.org/1.5.0/angular.min.js"></script>
-<script src="//code.angularjs.org/1.5.0/angular-route.min.js"></script>
-<script src="//code.angularjs.org/1.5.0/angular-cookies.min.js"></script>
+<script src="<c:url value='/resource/angular.min.js'/>"></script>
+<script src="<c:url value='/resource/angular-route.min.js'/>"></script>
+<script src="<c:url value='/resource/angular-cookies.min.js'/>"></script>
+<script src="<c:url value='/resource/jquery-3.1.1.min.js'/>"></script>
 
 <script src="<c:url value='/static/js/service/app.js' />"></script>
 <script src="<c:url value='/static/js/service/authentication.service.js' />"></script>

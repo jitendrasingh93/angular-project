@@ -7,7 +7,6 @@
     angular
         .module('app')
         .controller('IndexController', IndexController);
-
     IndexController.$inject = ['$scope', '$location', 'AuthenticationService', 'FlashService'];
 
     function IndexController($scope ,$location, AuthenticationService, FlashService) {

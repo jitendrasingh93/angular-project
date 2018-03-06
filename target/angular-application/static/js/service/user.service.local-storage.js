@@ -105,7 +105,7 @@
         // private functions
 
         function getUsers() {
-            if(!localStorage.users){
+            if(!localStorage.users) {
                 localStorage.users = JSON.stringify([]);
             }
 
