@@ -54,7 +54,7 @@
             // set default auth header for http requests
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
 
-            // store user details in globals cookie that keeps user logged in for 1 minute (or until they logout)
+            // store user details in globals cookie that keeps user logged in for 2 minute (or until they logout)
             var cookieExp = new Date();
             cookieExp.setMinutes(cookieExp.getMinutes() + 2);
             $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
