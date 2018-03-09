@@ -19,7 +19,7 @@
 
             /* Dummy authentication for testing, uses $timeout to simulate api call
              ----------------------------------------------*/
-            $timeout(function () {
+           /* $timeout(function () {
                 var response;
                 UserService.GetByUsername()
                     .then(function (user) {
@@ -30,14 +30,27 @@
                         }
                         callback(response);
                     });
-            }, 1000);
+            }, 1000);*/
 
             /* Use this for real authentication
-             ----------------------------------------------*/
-            //$http.post('/api/authenticate', { username: username, password: password })
-            //    .success(function (response) {
-            //        callback(response);
-            //    });
+         /*    ----------------------------------------------*/
+     /*       $http.post('https://2ayo5w0voh.execute-api.us-west-2.amazonaws.com/prod/auth', { "userName" : username, "password" : password })
+                .success(function (response) {
+                    alert("result : "+response.toString());
+                });
+*/
+
+
+            $http({
+                method: 'POST',
+                url: 'https://2ayo5w0voh.execute-api.us-west-2.amazonaws.com/prod/auth',
+                data: { "userName" : username, "password" : password },
+                headers: {'Content-Type': 'application/json'
+                }}).then(function(result) {
+                console.log(result);
+            }, function(error) {
+                console.log(error);
+            });
 
         }
 
